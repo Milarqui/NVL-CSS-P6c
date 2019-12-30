@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Receta</title>
+    <style>
+      b.under {
+        text-decoration: underline;
+      }
+      textarea {
+        border: 2px solid black;
+      }
+      label {
+        text-decoration: underline;
+      }
+      [data-vegetal] {
+        color: green;
+      }
+      [data-carne] {
+        color: red;
+      }
+      [data-otro="Lácteo"] {
+        color: gold;
+      }
+      [data-otro="Huevo"] {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pasta a la carbonara</h1>
+    <img src=https://i.blogs.es/3b8370/carbonara-listos/450_1000.jpg>
+    <p>Este es un plato delicioso y nutritivo que llena el estómago a base de bien y nunca decepciona (a menos que lo hagas muy mal, por supuesto). Además, es fácil de hacer y no necesita de complicaciones: mezclas los ingredientes en el orden correcto y ya está.</p>
+    <p>Cuando leas la lista de los ingredientes, seguramente te plantearás dónde está la nata (porque en Internet parece que, si es carbonara, lleva nata). <b>Craso error</b>: la verdadera pasta carbonara nunca llevará nata, ya que ésta sólo se usa para dar una textura cremosa que puede lograrse usando solamente los ingredientes indicados.</p>
+    <p><b class="under">Ingredientes (para 4 personas):</b>
+    <ul>
+      <li data-vegetal>250 gramos de pasta larga (espaguetis o tallarines)</li>
+      <li data-otro="Huevo">4 huevos</li>
+      <li data-otro="Lácteo">Queso parmesano rallado</li>
+      <li data-vegetal>Pimienta</li>
+      <li data-carne>250 gramos de panceta</li>
+      <li data-vegetal>Aceite</li>
+      <li data-otro="Alcohol">2 cucharadas de vino blanco de cocinar</li>
+    </ul></p>
+    <p><b class="under">Pasos a seguir:</b>
+    <ol>
+      <li>Pon agua a calentar. Cuando esté hirviendo, echa la <b>pasta</b> dentro.</li>
+      <li>Abre los <b>huevos</b> y separa <b>claras</b> de <b>yemas</b>. Pon estas últimas en el bol en el que vayas a servir la pasta.</li>
+      <li>Coge el <b>queso parmesano</b> y empieza a mezclarlo con las <b>yemas</b>, usando un tenedor. Cuando veas que se forma una pasta, está hecho. Si quieres, puedes echar un poco de <b>clara</b> para hacerla menos densa.</li>
+      <li>Echa <b>pimienta</b> (al gusto) en la mezcla de <b>yema</b> y <b>queso</b>.</li>
+      <li>Corta la <b>panceta</b> en tiras pequeñas (no más grandes que dos falanges de tu dedo).</li>
+      <li>En una olla pequeña, echa un poco de <b>aceite</b> y empieza a freir la <b>panceta</b>.</li>
+      <li>Cuando veas que está haciéndose la <b>panceta</b>, echa el <b>vino</b> poco a poco en la olla.</li>
+      <li>Cuando esté la <b>pasta</b> hecha, cuélala, échala en el bol donde está la mezcla <b class="under">sin enfriarla</b> y revuelve todo de inmediato. De esta manera, el calor de la pasta hará que el <b>queso</b> se derrita y que la <b>yema</b> cuaje, dando la textura especial que se busca.</li>
+      <li>Cuando la <b>panceta</b> esté terminado, mézclalo en el bol (incluyendo también la grasa que quede en la olla) y mezcla todo junto.</li>
+      <li>Echa <b>pimienta</b> y <b>queso parmesano</b> hasta que esté a tu gusto.</li>
+    </ol></p>
+    <p>Es recomendable comer este plato recién hecho, ya que la forma en que está hecho hace que quede más delicioso en ese momento.</p>
+    <p>¡Pruébalo y cuéntanos la experiencia!</p>
+    <form method="post" action="comentario.php">
+      <div>
+        <label for="Nombre">Nombre:</label>
+        <input id="Nombre" type="text">
+      </div>
+      <div>
+        <label for="eMail">Correo electrónico:</label>
+        <input id="eMail" type="text">
+      </div>
+      <div>
+        <label for="Satisfaction">Del 0 al 10, ¿cuál es tu nivel de satisfacción con esta receta?</label>
+        <select id="Satisfaction">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div>
+        <label for="Opinion">¿Cuál es tu opinión? ¿Recomiendas algún cambio?</label>
+        <textarea id="Opinion"></textarea>
+      </div>
+      <div>
+        <label for="Subscription">¿Deseas recibir avisos de nuevas recetas en el futuro?</label>
+        <input name="Subscription" type="radio" value="0">No
+        <input name="Subscription" type="radio" value="1">Sí
+      </div>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
